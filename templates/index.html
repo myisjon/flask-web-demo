@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block stylesheet %}
+    <link href="{{ url_for('static', filename='css/custom.css') }}" rel="stylesheet">
+{% endblock %}
+{% block body %}
+<section id="header">
+    <div class="container">
+        <header>
+            <!-- HEADLINE -->
+            <h1 data-animated="GoIn"><b>大数据</b></h1>
+        </header>
+        <!-- END TIMER -->
+        <div class="col-lg-10 col-lg-offset-1 mt centered">
+            <h4>搜索农场品名称</h4>
+            <div class="form-inline" role="form">
+              <div class="form-group">
+                <label class="sr-only" for="searchFormName">请输入农场品名称</label>
+                <input type="text" class="search-form" id="searchFormName" placeholder="请输入农场品名称">
+              </div>
+              <button id="searchButton" type="button" class="btn btn-lg btn-info">搜索</button>
+              <div id="resultsList" class="list-group mt col-lg-6 col-lg-offset-3">
+              </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- START SLIDER -->
+    <div id="slider">
+        <ul>
+          <li data-transition="slideleft" data-slotamount="1" data-thumb="{{ url_for(
+          'static', filename='img/slider/1.jpg') }}">
+            <img src="{{ url_for('static', filename='img/slider/1.jpg') }}">
+          </li>
+        </ul>
+    </div>
+    <!-- END SLIDER -->
+</section>
+{% endblock %}
+{% block script %}
+    <script src="{{ url_for('static', filename='js/soon/search.js')}} "></script>
+{% endblock%}

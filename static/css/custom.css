@@ -1,0 +1,19 @@
+.echarts-style {
+    height: 520px;
+    width: 782px;
+}
+
+.echarts-div {
+    margin-top: 3em;
+}
+.show-list {
+    color: black;
+    margin: 1em;
+}
+
+.btn-red {
+    color: red;
+}
+.span-margin {
+    margin: 2em;
+}
